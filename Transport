@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Transportation in Japan</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    background: #f5f5f5;
+  }
+
+  /* NAVBAR */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    padding: 15px 30px;
+  }
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  .nav-links li {
+    list-style: none;
+  }
+  .navbar a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    position: relative;
+  }
+ .language-switcher select {
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: none;
+    background: white;
+    color: #111;
+    font-size: 14px;
+  }
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  /* Underline hover animation */
+  .navbar a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #ff4d4d;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+  }
+
+  .navbar a:hover::after {
+    width: 100%;
+  }
+
+  /* HERO */
+  .hero {
+    background: url('https://images.unsplash.com/photo-1526481280691-3bfa7568e2c6?auto=format&fit=crop&w=1400&q=80') no-repeat center/cover;
+    height: 300px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero h1 {
+    background: rgba(0,0,0,0.5);
+    padding: 15px 25px;
+    border-radius: 10px;
+    animation: fadeIn 1.5s ease;
+  }
+
+  /* SECTION */
+  .section {
+    padding: 30px;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  /* CARD STYLE */
+  .attraction {
+    background: white;
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease forwards;
+  }
+
+  /* Hover effect */
+  .attraction:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+
+  .images {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .images img {
+    width: 100%;
+    max-width: 450px;
+    margin: 10px 10px 10px 0;
+    border-radius: 10px;
+    transition: transform 0.3s, filter 0.3s;
+  }
+
+  /* Image hover zoom */
+  .images img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
+
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Delay each card slightly */
+  .attraction:nth-child(1) { animation-delay: 0.2s; }
+  .attraction:nth-child(2) { animation-delay: 0.4s; }
+  .attraction:nth-child(3) { animation-delay: 0.6s; }
+  .attraction:nth-child(4) { animation-delay: 0.8s; }
+  .attraction:nth-child(5) { animation-delay: 1s; }
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo" id="logoText">Explore Japan 🇯🇵</div>
+  <ul class="nav-links">
+   <li><a id="nav6" href="proxeiro.html">Home</a></li>
+   <li><a id="nav1" href="Untitled-1.html">Attractions</a></li>
+   <li><a id="nav2" href="food.html">National Food and restaurants</a></li>
+    <li><a id="nav3" href="transport.html">Transportation</a></li>
+    <li><a id="nav4" href="hotel.html">Hotels/Accommodations </a></li>
+    <li><a id="nav5" href="special section.html">Special Section </a></li>
+    </ul>
+  </div>
+  <div class="language-switcher">
+     <label for="languageSelect" class="visually-hidden">Select language</label>
+     <select id="languageSelect" aria-label="Choose language">
+      <option value="en">English</option>
+      <option value="el">Ελληνικά</option>
+    </select>
+  </div>
+</nav> 
+
+<!-- HERO -->
+<div class="hero">
+  <h1 id="title">Transportation in Japan 🇯🇵</h1>
+</div>
+
+<!-- CONTENT -->
+<div class="section">
+   <div class="attraction">
+    <h2 id="trans1">Bullet train(Shinkansen)</h2>
+    <p id="text1">The Shinkansen, also known as the bullet train, is one of the fastest means of transport in the world and one of the most efficiently engineered rail systems. It can reach speeds of up to 320 km/h while remaining comfortable and extremely punctual. Since opening in 1964, the Shinkansen has had zero passenger fatalities or injuries due to train accidents such as derailments or collisions, marking a perfect safety record thus far, making it one of the safest transportation methods in the world as well. Spanning over nine major lines, it connects Tokyo to most major cities, such as Kyoto and Osaka, usually in under 2.5 hours. It offers comfortable seats, space for luggage and even food services on some routes. Tickets can easily be booked online via services like SmartEx or JR East. One key reason for its high-speed and reliability is that it has its own private rail network, so the congection from other lines have no effect. They were able to design all of the lines specifically for high-speed passenger transport and barely making any turns even when tunneling through mountains. It also uses continuous welded rails so there is less bumping up and down when going from one rail to the next making it a smoother ride. In addition, it was designed with more aerodynamic, inspired by nature, and operates in more powerful power lines.</p>
+<div class="images">
+      <img src="https://th.bing.com/th/id/OIP.-7s9wpXPI1fj2tJbUrf3wQHaHa?w=185&h=184&c=7&r=0&o=7&pid=1.7&rm=3" alt="Shinkansen">
+    </div>
+</div> 
+</div>
+<div class="section">
+   <div class="attraction">
+    <h2 id="trans2">Trains And Subways</h2>
+    <p id="text2">	Cities like Tokyo and Osaka have large, efficient train and subway systems, for example the Tokyo Metro where trains are frequent yet very punctual. It is widely considered the main way to get around cities and the easiest one for tourists due to its accessibility with signs usually being in both Japanese and English, making navigating easier.</p>
+    <h2 id="trans3">IC cards</h2>
+    <p id="text3"> IC cards like Suica or Pasmo are used to save time and to avoid having to constantly buy tickets every trip. You can tap them to pay for trains, buses and even some convenience stores.</p>
+    <h2 id="trans4">Tips for tourists</h2>
+    <p id="text4"> Tourists ought to always be on time, trains tend to be very punctual so being late will cost you some time. The means of transport are very crowded during the rush hour. It is best to keep quiet on public transportation. Taxis are clean and safe but expensive, best for short distances or late at night, harder for tourists due to language barrier, doors open automatically. In Japan they drive on the left side of the road and the driver's seat is on the right side of the car. For smaller cities and areas without trains, buses are the most reliable alternative. Google Maps is a very effective tool in Japan.</p>
+    </div>
+</div>
+<script> 
+const translations = {
+
+  en: {
+
+    htmlLang: 'en',
+    logoText: 'Explore Japan 🇯🇵',
+    nav1: 'Attractions',
+    nav2: 'National food and restaurants',
+    nav3: 'Transportation',
+    nav4: 'Hotels/Accommodations',
+    nav5: 'Special Section',
+    nav6: 'Home',
+    title: 'Transportation in Japan 🇯🇵',
+    trans1: 'Bullet train(Shinkansen)',
+    text1: 'The Shinkansen, also known as the bullet train, is one of the fastest means of transport in the world and one of the most efficiently engineered rail systems. It can reach speeds of up to 320 km/h while remaining comfortable and extremely punctual. Since opening in 1964, the Shinkansen has had zero passenger fatalities or injuries due to train accidents such as derailments or collisions, marking a perfect safety record thus far, making it one of the safest transportation methods in the world as well. Spanning over nine major lines, it connects Tokyo to most major cities, such as Kyoto and Osaka, usually in under 2.5 hours. It offers comfortable seats, space for luggage and even food services on some routes. Tickets can easily be booked online via services like SmartEx or JR East. One key reason for its high-speed and reliability is that it has its own private rail network, so the congection from other lines have no effect. They were able to design all of the lines specifically for high-speed passenger transport and barely making any turns even when tunneling through mountains. It also uses continuous welded rails so there is less bumping up and down when going from one rail to the next making it a smoother ride. In addition, it was designed with more aerodynamic, inspired by nature, and operates in more powerful power lines.',
+    trans2: 'Trains And Subways',
+    text2: 'Cities like Tokyo and Osaka have large, efficient train and subway systems, for example the Tokyo Metro where trains are frequent yet very punctual. It is widely considered the main way to get around cities and the easiest one for tourists due to its accessibility with signs usually being in both Japanese and English, making navigating easier.',
+    trans3: 'IC cards',
+    text3: 'IC cards like Suica or Pasmo are used to save time and to avoid having to constantly buy tickets every trip. You can tap them to pay for trains, buses and even some convenience stores.',
+    trans4: 'Tips for tourists',
+    text4: "Tourists ought to always be on time, trains tend to be very punctual so being late will cost you some time. The means of transport are very crowded during the rush hour. It is best to keep quiet on public transportation. Taxis are clean and safe but expensive, best for short distances or late at night, harder for tourists due to language barrier, doors open automatically. In Japan they drive on the left side of the road and the driver's seat is on the right side of the car. For smaller cities and areas without trains, buses are the most reliable alternative. Google Maps is a very effective tool in Japan.",
+
+  },
+  el: {
+    htmlLang: 'el',
+    logoText: 'Εξερευνήστε την Ιαπωνία 🇯🇵',
+    nav1: 'Αξιοθέατα',
+    nav2: 'Παραδοσιακά Φαγητά και κουζίνα',
+    nav3: 'Ταξίδια',
+    nav4: 'Διαμονή',
+    nav5: 'Special Section',
+    nav6: 'Αρχική σελίδα',
+    title: 'Τα ΜΜΜ στην Ιαπωνία 🇯🇵',
+    trans1: 'Bullet train(Shinkansen)',
+    text1: 'Ο Shinkansen, γνωστός και ως «bullet train» (τρένο-σφαίρα), είναι ένα από τα ταχύτερα μέσα μεταφοράς στον κόσμο και ένα από τα πιο αποδοτικά σχεδιασμένα σιδηροδρομικά συστήματα. Μπορεί να φτάσει ταχύτητες έως και 320 km/h, παραμένοντας ταυτόχρονα άνετος και εξαιρετικά συνεπής. Από το άνοιγμά του το 1964, ο Shinkansen δεν έχει καταγράψει θανάτους ή τραυματισμούς επιβατών λόγω σιδηροδρομικών ατυχημάτων όπως εκτροχιασμούς ή συγκρούσεις, γεγονός που αποτελεί ένα σχεδόν τέλειο ιστορικό ασφάλειας, καθιστώντας τον ένα από τα ασφαλέστερα μέσα μεταφοράς στον κόσμο. Καλύπτοντας πάνω από εννέα βασικές γραμμές, συνδέει το Τόκιο με τις περισσότερες μεγάλες πόλεις, όπως το Κιότο και την Οσάκα, συνήθως σε λιγότερο από 2,5 ώρες και προσφέρει άνετα καθίσματα, χώρο για αποσκευές και ακόμη και υπηρεσίες φαγητού σε ορισμένες διαδρομές. Τα εισιτήρια μπορούν εύκολα να κλειστούν online μέσω υπηρεσιών όπως το SmartEx ή το JR East. Ένας βασικός λόγος για την υψηλή ταχύτητα και αξιοπιστία του είναι ότι διαθέτει το δικό του ιδιωτικό σιδηροδρομικό δίκτυο, οπότε η κυκλοφοριακή συμφόρηση από άλλες γραμμές δεν τον επηρεάζει. Οι γραμμές έχουν σχεδιαστεί ειδικά για υψηλής ταχύτητας επιβατικές μεταφορές με ελάχιστες στροφές ακόμη και σε ορεινές περιοχές, ενώ χρησιμοποιούνται συνεχόμενες συγκολλημένες ράγες που μειώνουν τους κραδασμούς και προσφέρουν πιο ομαλή διαδρομή. Επιπλέον, έχει σχεδιαστεί με πιο αεροδυναμικό σχήμα, εμπνευσμένο από τη φύση, και λειτουργεί με ισχυρά ενεργειακά συστήματα.',
+    trans2: 'Τρένα και Μετρά',
+    text2: 'Πόλεις όπως το Τόκιο και η Οσάκα διαθέτουν μεγάλα και αποδοτικά δίκτυα τρένων και μετρό, για παράδειγμα το Tokyo Metro, όπου τα τρένα είναι συχνά αλλά και πολύ ακριβή ως προς την ώρα. Θεωρείται ευρέως ο βασικός τρόπος μετακίνησης μέσα στις πόλεις και ο πιο εύκολος για τους τουρίστες λόγω της προσβασιμότητάς του, με τις πινακίδες να είναι συνήθως τόσο στα ιαπωνικά όσο και στα αγγλικά, γεγονός που κάνει την πλοήγηση πιο εύκολη.',
+    trans3: 'IC cards',
+    text3: 'IC κάρτες όπως η Suica ή η Pasmo χρησιμοποιούνται για να εξοικονομούν χρόνο και να αποφεύγεται η συνεχής αγορά εισιτηρίων σε κάθε διαδρομή. Μπορούν να χρησιμοποιηθούν απλά με ένα tap για πληρωμή σε τρένα, λεωφορεία και ακόμη και σε ορισμένα convenience stores.',
+    trans4: 'Συμβουλές Για Τουρίστες',
+    text4: 'Οι τουρίστες πρέπει να είναι πάντα στην ώρα τους, καθώς τα τρένα στην Ιαπωνία είναι εξαιρετικά ακριβή και η καθυστέρηση μπορεί να κοστίσει χρόνο στις μετακινήσεις. Τα μέσα μεταφοράς είναι πολύ γεμάτα κατά τις ώρες αιχμής. Είναι καλύτερο να παραμένει κανείς ήσυχος στα μέσα μαζικής μεταφοράς. Τα ταξί είναι καθαρά και ασφαλή αλλά ακριβά, ιδανικά για μικρές αποστάσεις ή αργά τη νύχτα, όμως μπορεί να είναι πιο δύσκολα για τους τουρίστες λόγω του γλωσσικού φραγμού, ενώ οι πόρτες ανοίγουν αυτόματα. Στην Ιαπωνία η οδήγηση γίνεται στην αριστερή πλευρά του δρόμου και η θέση του οδηγού βρίσκεται στη δεξιά πλευρά του αυτοκινήτου. Για μικρότερες πόλεις και περιοχές χωρίς τρένα, τα λεωφορεία αποτελούν την πιο αξιόπιστη εναλλακτική. Το Google Maps είναι ένα πολύ αποτελεσματικό εργαλείο στην Ιαπωνία.',
+  }
+};function setLanguage(lang) {
+    const data = translations[lang] || translations.en;
+    document.documentElement.lang = data.htmlLang;
+    Object.keys(data).forEach((key) => {
+      if (key === 'htmlLang') return;
+      const element = document.getElementById(key);
+      if (element) {
+        element.textContent = data[key];
+      }
+    });
+  }
+
+  const languageSelect = document.getElementById('languageSelect');
+  languageSelect.addEventListener('change', () => setLanguage(languageSelect.value));
+  setLanguage('en');</script>
+</body>
+</html>
