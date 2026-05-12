@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Japanese Cuisine</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    background: #f5f5f5;
+  }
+
+  /* NAVBAR */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    padding: 15px 30px;
+  }
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  .nav-links li {
+    list-style: none;
+  }
+  .navbar a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    position: relative;
+  }
+ .language-switcher select {
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: none;
+    background: white;
+    color: #111;
+    font-size: 14px;
+  }
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  /* Underline hover animation */
+  .navbar a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #ff4d4d;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+  }
+
+  .navbar a:hover::after {
+    width: 100%;
+  }
+
+  /* HERO */
+  .hero {
+    background: url('https://images.unsplash.com/photo-1526481280691-3bfa7568e2c6?auto=format&fit=crop&w=1400&q=80') no-repeat center/cover;
+    height: 300px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero h1 {
+    background: rgba(0,0,0,0.5);
+    padding: 15px 25px;
+    border-radius: 10px;
+    animation: fadeIn 1.5s ease;
+  }
+
+  /* SECTION */
+  .section {
+    padding: 30px;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  /* CARD STYLE */
+  .attraction {
+    background: white;
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease forwards;
+  }
+
+  /* Hover effect */
+  .attraction:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+
+  .images {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .images img {
+    width: 100%;
+    max-width: 450px;
+    margin: 10px 10px 10px 0;
+    border-radius: 10px;
+    transition: transform 0.3s, filter 0.3s;
+  }
+
+  /* Image hover zoom */
+  .images img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
+
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Delay each card slightly */
+  .attraction:nth-child(1) { animation-delay: 0.2s; }
+  .attraction:nth-child(2) { animation-delay: 0.4s; }
+  .attraction:nth-child(3) { animation-delay: 0.6s; }
+  .attraction:nth-child(4) { animation-delay: 0.8s; }
+  .attraction:nth-child(5) { animation-delay: 1s; }
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo" id="logoText">Explore Japan 🇯🇵</div>
+  <ul class="nav-links">
+   <li><a id="nav6" href="proxeiro.html">Home</a></li>
+   <li><a id="nav1" href="Untitled-1.html">Attractions</a></li>
+   <li><a id="nav2" href="food.html">National Food and restaurants</a></li>
+    <li><a id="nav3" href="transport.html">Transportation</a></li>
+    <li><a id="nav4" href="hotel.html">Hotels/Accommodations </a></li>
+    <li><a id="nav5" href="special section.html">Special Section </a></li>
+    </ul>
+  </div>
+  <div class="language-switcher">
+     <label for="languageSelect" class="visually-hidden">Select language</label>
+     <select id="languageSelect" aria-label="Choose language">
+      <option value="en">English</option>
+      <option value="el">Ελληνικά</option>
+    </select>
+  </div>
+</nav> 
+
+<!-- HERO -->
+<div class="hero">
+  <h1 id="title">🍜 Japanese Food 🇯🇵</h1>
+</div>
+<!-- CONTENT -->
+
+<div class="section">
+  <div class="attraction">
+    <h2 id="food1">National foods</h2>
+    <p id="text1">	Japanese cuisine is known for its diversity and balance of flavors as well as the dishes’ presentation. Sushi is a widely known dish made of fresh raw fish served over rice. </p>
+    <p id="text2"> Next is ramen, a flavorful noodle soup with unique broths and toppings that may differ per region. Bento boxes are convenient meals that include rice, meat or fish and vegetables inside of a small container. </p> 
+    <p id="text3">Tempura, a quintessential Japanese dish featuring seafood and vegetables covered in a light, airy batter and deep-fried until they are crispy. Dango, one of the most unique Japanese meals, is a small rice sweet dumpling on a bamboo skewer often enjoyed with sweet toppings, it is often associated with seasonal festivals, tsukimi (moon-viewing), and hanami (cherry-blossom viewing), having a cultural background. Okonomiyaki, a savory Japanese pancake, made with shredded cabbage and white flour batter, it is often referred to as the "Japanese pizza" offering endless customization options and different toppings. </p> 
+    <p id="text4">Finally, A5 Wagyu beef, the most expensive meat in the world (500-700€/kg) has Japanese origins and is known for its tenderness and rich flavour as well as its nutritional value.</p>
+  <div class="images">
+    <img src="https://th.bing.com/th/id/OIP.BW1rJlyGmBS6UbziIQezOgHaE8?w=294&h=196&c=7&r=0&o=7&pid=1.7&rm=3">
+    <img src="data:image/webp;base64,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">
+  </div>
+</div>
+<div class="section ">
+<div class="attraction">
+<h2 id="food2">Expensive Restaurants</h2>
+<p id="text5"> Sukiyabashi Jiro, located in Ginza, Tokyo, is a world famous sushi restaurant known for its top quality ingredients, it may often require reservartion so as to have a spot saved for you. Tempura Kondo, also located in Ginza, Tokyo, offers high quality tempura and stands out for its exceptional lightness. Reservations might also be required. </p> 
+<p id="text8"> A5 Wagyu Beef is often served at luxurious restaurants, which helps customers avoid certain restaurants if they are on a tight budget.</p>
+<h2 id="food3">Budget friendly Restaurants</h2>
+<p id="text6">	Ichiran Ramen, 7-Eleven Japan and Sushiro are all well known places that have restaurants all over Japan for customers looking for cheap yet tasty alternatives. Ichiran Ramen is known for its quick service and its individual booths, being served ramen through a small bamboo curtain, making it a great experience for solo travelling or if you don’t want to socialize at the moment, ramen there is served within 15 seconds of being plated so as to maintain peak freshness. 7-Eleven offers high-quality bento boxes and tasty snacks. Sushiro features a unique way of serving sushi at low prices through a conveyor belt that passes through each seat and the price is determined by the color and pattern of the plate, if a desired plate is not featured on the conveyor belt customers can place their own orders.</p>
+<h2 id="food4">Other Restaurant recommendations</h2>
+<p id="text7">	Izakayas, which can be found all over Japan, are informal Japanese bars or taverns that serve alcoholic drinks alongside a variety of small dishes. Being reasonably priced and having a lively atmosphere, they are often used for casual gatherings after work, socializing with friends or even for dates. Yakiniku-ya, found all over Japan, specialize in yakiniku (grilled meat) or Japanese-style barbecue. They are known for their hands-on dining experience where customers can cook thin slices of raw meat and vegetables themselves on a built-in grill in the table. They mainly consist of meat and include dipping sauces.</p>
+<img src="https://cdn.discordapp.com/attachments/1495776543140483109/1503116003314368773/a0002670_main.png?ex=6a022d5d&is=6a00dbdd&hm=970f748b7af0abd484e571a3808a26f4cf8694a4f5a777588b7dfe96b907a816&s">
+
+</div>
+</div>
+
+
+
+
+<script> const translations = {
+    en: {
+      htmlLang: 'en',
+      logoText: 'Explore Japan 🇯🇵',
+      title: '🍜 Japanese Food 🇯🇵',
+      food1: 'National foods',
+      text1:	'Japanese cuisine is known for its diversity and balance of flavors as well as the dishes’ presentation. Sushi is a widely known dish made of fresh raw fish served over rice.',
+      text2: 'Next is ramen, a flavorful noodle soup with unique broths and toppings that may differ per region. Bento boxes are convenient meals that include rice, meat or fish and vegetables inside of a small container.',
+      text3: 	"Tempura, a quintessential Japanese dish featuring seafood and vegetables covered in a light, airy batter and deep-fried until they are crispy. Dango, one of the most unique Japanese meals, is a small rice sweet dumpling on a bamboo skewer often enjoyed with sweet toppings, it is often associated with seasonal festivals, tsukimi (moon-viewing), and hanami (cherry-blossom viewing), having a cultural background. Okonomiyaki, a savory Japanese pancake, made with shredded cabbage and white flour batter, it is often referred to as the 'Japanese pizza' offering endless customization options and different toppings. ",
+      text4: 'Finally, A5 Wagyu beef, the most expensive meat in the world (500-700€/kg) has Japanese origins and is known for its tenderness and rich flavour as well as its nutritional value.',
+      food2: 'Expensive Restaurants',
+      text5: 'Sukiyabashi Jiro, located in Ginza, Tokyo, is a world famous sushi restaurant known for its top quality ingredients, it may often require reservartion so as to have a spot saved for you. Tempura Kondo, also located in Ginza, Tokyo, offers high quality tempura and stands out for its exceptional lightness. Reservations might also be required.', 
+      text8: 'A5 Wagyu Beef is often served at luxurious restaurants, which helps customers avoid certain restaurants if they are on a tight budget.',      
+      food3: 'Budget friendly Restaurants',
+      text6: 'Ichiran Ramen, 7-Eleven Japan and Sushiro are all well known places that have restaurants all over Japan for customers looking for cheap yet tasty alternatives. Ichiran Ramen is known for its quick service and its individual booths, being served ramen through a small bamboo curtain, making it a great experience for solo travelling or if you don’t want to socialize at the moment, ramen there is served within 15 seconds of being plated so as to maintain peak freshness. 7-Eleven offers high-quality bento boxes and tasty snacks. Sushiro features a unique way of serving sushi at low prices through a conveyor belt that passes through each seat and the price is determined by the color and pattern of the plate, if a desired plate is not featured on the conveyor belt customers can place their own orders.',      
+      food4: 'Other Restaurant recommendations', 
+      text7: 'Izakayas, which can be found all over Japan, are informal Japanese bars or taverns that serve alcoholic drinks alongside a variety of small dishes. Being reasonably priced and having a lively atmosphere, they are often used for casual gatherings after work, socializing with friends or even for dates. Yakiniku-ya, found all over Japan, specialize in yakiniku (grilled meat) or Japanese-style barbecue. They are known for their hands-on dining experience where customers can cook thin slices of raw meat and vegetables themselves on a built-in grill in the table. They mainly consist of meat and include dipping sauces.',           
+      nav1: 'Attractions',
+      nav2: 'National food and restaurants',
+      nav3: 'Transportation',
+      nav4: 'Hotels/Accommodations',
+      nav5: 'Special Section',
+      nav6: 'Home',
+
+    },
+    
+    
+    el: {
+
+    htmlLang: 'el',
+    
+
+    logoText: 'Εξερευνήστε την Ιαπωνία 🇯🇵',
+    title: '🍜 Ιαπωνέζικα Φαγητά 🇯🇵',
+    food1: 'Παραδοσιακά Φαγητά',
+      text1: 'Η ιαπωνική κουζίνα είναι γνωστή για την ποικιλία και την ισορροπία των γεύσεών της, καθώς και για την παρουσίαση των πιάτων της. Το σούσι είναι ένα ευρέως γνωστό πιάτο που αποτελείται από φρέσκο ωμό ψάρι που σερβίρεται πάνω σε ρύζι.',
+      text2: 'Στη συνέχεια υπάρχει το ramen, μια γευστική σούπα με noodles και ιδιαίτερους ζωμούς και γαρνιτούρες που διαφέρουν ανά περιοχή. Τα bento boxes είναι πρακτικά γεύματα που περιλαμβάνουν ρύζι, κρέας ή ψάρι και λαχανικά μέσα σε ένα μικρό δοχείο.',
+      text3: 'Η tempura είναι ένα χαρακτηριστικό ιαπωνικό πιάτο που περιλαμβάνει θαλασσινά και λαχανικά, καλυμμένα με ελαφρύ, αφράτο κουρκούτι και τηγανισμένα μέχρι να γίνουν τραγανά. Το dango, ένα από τα πιο ιδιαίτερα ιαπωνικά εδέσματα, είναι μικρά γλυκά ζυμαράκια ρυζιού σε ξύλινη ή μπαμπού σούβλα, που συχνά καταναλώνονται με γλυκές επικαλύψεις και συνδέεται με εποχιακές γιορτές όπως το tsukimi (παρατήρηση της σελήνης) και το hanami (παρατήρηση ανθισμένων κερασιών), έχοντας έντονο πολιτισμικό υπόβαθρο. Το okonomiyaki είναι μια αλμυρή ιαπωνική τηγανίτα φτιαγμένη με ψιλοκομμένο λάχανο και ζύμη από λευκό αλεύρι και συχνά αποκαλείται «ιαπωνική πίτσα», προσφέροντας πολλές επιλογές προσαρμογής με διαφορετικά toppings.',
+      text4: 'Τέλος, το βοδινό A5 Wagyu, το πιο ακριβό κρέας στον κόσμο (500–700€/kg), έχει ιαπωνική προέλευση και είναι γνωστό για την τρυφερότητά του, την πλούσια γεύση του και τη διατροφική του αξία.',
+      text8: 'Το βοδινό A5 Wagyu σερβίρεται συχνά σε πολυτελή εστιατόρια, κάτι που βοηθά τους επισκέπτες να αποφύγουν τέτοια μέρη αν έχουν περιορισμένο προϋπολογισμό.',
+      food2: 'Πολυτελές Εστιατόρια',
+      text5: 'Sukiyabashi Jiro, που βρίσκεται στο Ginza του Τόκιο, είναι ένα παγκοσμίου φήμης εστιατόριο σούσι γνωστό για τα εξαιρετικής ποιότητας υλικά του και συχνά απαιτεί κράτηση ώστε να εξασφαλιστεί θέση. Το Tempura Kondo, επίσης στο Ginza του Τόκιο, προσφέρει υψηλής ποιότητας tempura και ξεχωρίζει για την εξαιρετική ελαφρότητά του, ενώ και εκεί μπορεί να απαιτείται κράτηση.',      
+      food3: 'Οικονομικά Εστιατόρια',
+      text6: 'Ichiran Ramen, 7-Eleven Japan και Sushiro είναι όλα γνωστά μέρη με εστιατόρια σε ολόκληρη την Ιαπωνία, ιδανικά για πελάτες που αναζητούν οικονομικές αλλά νόστιμες επιλογές. Το Ichiran Ramen είναι γνωστό για την γρήγορη εξυπηρέτηση και τα ατομικά του booth, όπου το ramen σερβίρεται μέσω ενός μικρού μπαμπού κουρτινάκι, προσφέροντας μια ιδιαίτερη εμπειρία, ιδανική για όσους ταξιδεύουν μόνοι ή δεν θέλουν κοινωνική αλληλεπίδραση εκείνη τη στιγμή· το ramen σερβίρεται μέσα σε περίπου 15 δευτερόλεπτα από την προετοιμασία του ώστε να διατηρείται η μέγιστη φρεσκάδα. Η 7-Eleven προσφέρει υψηλής ποιότητας bento boxes και νόστιμα σνακ. Το Sushiro διαθέτει έναν μοναδικό τρόπο σερβιρίσματος σούσι σε χαμηλές τιμές μέσω ενός κυλιόμενου ιμάντα που περνά από κάθε θέση, ενώ η τιμή καθορίζεται από το χρώμα και το σχέδιο του πιάτου· αν κάποιο επιθυμητό πιάτο δεν υπάρχει στον ιμάντα, οι πελάτες μπορούν να το παραγγείλουν ξεχωριστά.',      
+      food4: 'Άλλες Προτάσεις για Εστιατόρια', 
+      text7: 'Izakayas, που βρίσκονται σε ολόκληρη την Ιαπωνία, είναι ανεπίσημα ιαπωνικά μπαρ ή ταβέρνες που σερβίρουν αλκοολούχα ποτά μαζί με μια ποικιλία από μικρά πιάτα. Με σχετικά προσιτές τιμές και ζωντανή ατμόσφαιρα, χρησιμοποιούνται συχνά για χαλαρές συναντήσεις μετά τη δουλειά, κοινωνικοποίηση με φίλους ή ακόμη και για ραντεβού. Τα yakiniku-ya, που επίσης βρίσκονται σε όλη την Ιαπωνία, εξειδικεύονται στο yakiniku (ψητό κρέας) ή στο ιαπωνικό μπάρμπεκιου. Είναι γνωστά για την εμπειρία “hands-on” φαγητού, όπου οι πελάτες ψήνουν μόνοι τους λεπτές φέτες ωμού κρέατος και λαχανικών σε ενσωματωμένη σχάρα στο τραπέζι. Τα γεύματα αυτά αποτελούνται κυρίως από κρέας και συνοδεύονται από διάφορες σάλτσες για βούτηγμα.',
+    nav1: 'Αξιοθέατα',
+    nav2: 'Παραδοσιακά Φαγητά και κουζίνα',
+    nav3: 'Ταξίδια',
+    nav4: 'Διαμονή',
+    nav5: 'Special Section',
+    nav6: 'Αρχική σελίδα',
+
+
+    }
+  };
+
+
+
+
+
+
+
+
+
+
+
+
+function setLanguage(lang) {
+    const data = translations[lang] || translations.en;
+    document.documentElement.lang = data.htmlLang;
+    Object.keys(data).forEach((key) => {
+      if (key === 'htmlLang') return;
+      const element = document.getElementById(key);
+      if (element) {
+        element.textContent = data[key];
+      }
+    });
+  }
+
+  const languageSelect = document.getElementById('languageSelect');
+  languageSelect.addEventListener('change', () => setLanguage(languageSelect.value));
+  setLanguage('en');</script>
+</body>
+</html>
