@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Top Japan Attractions</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    background: #f5f5f5;
+  }
+
+  /* NAVBAR */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    padding: 15px 30px;
+  }
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  .nav-links li {
+    list-style: none;
+  }
+  .navbar a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    position: relative;
+  }
+ .language-switcher select {
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: none;
+    background: white;
+    color: #111;
+    font-size: 14px;
+  }
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  /* Underline hover animation */
+  .navbar a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #ff4d4d;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+  }
+
+  .navbar a:hover::after {
+    width: 100%;
+  }
+
+  /* HERO */
+  .hero {
+    background: url('https://images.unsplash.com/photo-1526481280691-3bfa7568e2c6?auto=format&fit=crop&w=1400&q=80') no-repeat center/cover;
+    height: 300px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero h1 {
+    background: rgba(0,0,0,0.5);
+    padding: 15px 25px;
+    border-radius: 10px;
+    animation: fadeIn 1.5s ease;
+  }
+
+  /* SECTION */
+  .section {
+    padding: 30px;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  /* CARD STYLE */
+  .attraction {
+    background: white;
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease forwards;
+  }
+
+  /* Hover effect */
+  .attraction:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+
+  .images {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .images img {
+    width: 100%;
+    max-width: 450px;
+    margin: 10px 10px 10px 0;
+    border-radius: 10px;
+    transition: transform 0.3s, filter 0.3s;
+  }
+
+  /* Image hover zoom */
+  .images img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
+
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Delay each card slightly */
+  .attraction:nth-child(1) { animation-delay: 0.2s; }
+  .attraction:nth-child(2) { animation-delay: 0.4s; }
+  .attraction:nth-child(3) { animation-delay: 0.6s; }
+  .attraction:nth-child(4) { animation-delay: 0.8s; }
+  .attraction:nth-child(5) { animation-delay: 1s; }
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo" id="logoText">Explore Japan 🇯🇵</div>
+  <ul class="nav-links">
+    <li><a id="nav1" href="proxeiro.html">Home</a></li>
+    <li><a id="nav6" href="Untitled-1.html">Attractions</a> </li>
+    <li><a id="nav2" href="food.html">National food and restaurants</a></li>
+    <li><a id="nav3" href="transport.html">Transportation</a></li>
+    <li><a id="nav4" href="hotel.html">Hotels/Accommodations </a></li>
+    <li><a id="nav5" href="special section.html">Special Section </a></li>
+</ul>
+</div>
+<div class="language-switcher">
+    <label for="languageSelect" class="visually-hidden">Select language</label>
+    <select id="languageSelect" aria-label="Choose language">
+      <option value="en">English</option>
+      <option value="el">Ελληνικά</option>
+    </select>
+  </div>
+</nav> 
+<div class="hero">
+  <h1 id="title">Top Japan Attractions 🇯🇵</h1>
+</div>
+
+<!-- CONTENT -->
+<div class="section">
+
+  <div class="attraction">
+    <h2 id="attraction1">🟢 1.	Mount Fuji(富士山/富士の山) </h2>
+    <div class="images">
+      <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80">
+      <img src="https://images.unsplash.com/photo-1570459027562-4a916cc6113f?auto=format&fit=crop&w=800&q=80">
+    </div>
+    <p id="text1">Mount fuji is the tallest mountain in Japan, standing at 3,776 above sea level and is considered a symbol of Japan. It last erupted in 1707 yet it still active to this day and stands out because it is made up of three different volcanoes. The mountain is surrounded by 5 lakes, Kawaguchiko(河口湖), the most popular and accesible one, Saiko(西湖), meaning the west lake, lake Yamanakako(山中湖) the largest, Shojiko (精進湖), the smallest and Motosuko (本栖湖) the deepest. There are 4 trails that lead to the top of the mountain, making climbing a popular activity amongs hikers and visitors. Visitors can also explore nearby attractions such as Oshino Hakkai, a small vilage in a scenic setting with 8 ponds and features views of Mount Fuji for amazing photos. There is also Arakurayama Sengen Park, which offers dramatic views of Mt. Fuji along with nearby seasonal cherry blossoms and a pagoda(a traditional Japanese tower).</p>
+  </div>
+
+  <div class="attraction">
+    <h2 id="attraction2">🟤 2.	Fushimi Inari Taisha(伏見稲荷大社)</h2>
+    <div class="images">
+      <img src="https://tse3.mm.bing.net/th/id/OIP.0nsfkc12lB_2UXXVTAeH1wHaE8?rs=1&pid=ImgDetMain&o=7&rm=3">
+      <img src="https://th.bing.com/th/id/OIP.PSm5JTZXlJMTYj3I0mwVWQHaE8?w=210&h=180&c=7&r=0&o=7&pid=1.7&rm=3">
+    </div>
+    <p id="text2">	Fushimi Inari Taisha(伏見稲荷大社) is one of the most famous shinto shrines in Japan, located Fushimi-ku, Kyoto. It was founded in 711 CE by the Hata clan and is considered the head shrine of 30,000 inari shrines. The shrine is dedicated to Inari Ōkami,the deity of rice, prosperity and business success. It is best known for its thousands of vermilion(bright red) torii gated forming scening tunnels along the wooded slopes of Mount Inari, offering an unforgetable walking experience for visitors. </p>
+  </div>
+
+  <div class="attraction">
+    <h2 id="attraction3">🔵 3.	Kinkaku-Ji(金閣寺)</h2>
+    <div class="images">
+      <img src="https://th.bing.com/th/id/OIP.U6jVTFXrtBGxkYlNiKIHDQHaEp?w=309&h=188&c=7&r=0&o=7&pid=1.7&rm=3">
+      <img src="https://th.bing.com/th/id/OIP.di4uL_f23QIdXxg-93CTgAHaFG?w=269&h=186&c=7&r=0&o=7&pid=1.7&rm=3">
+    </div>
+    <The id="text3">	Kinkaku-Ji(金閣寺), also known as the Golden Pavilion, is a Zen Buddhist Temple in Kyoto. Its official name is Rokuon-ji(鹿苑寺), meaning "Deer Garden Temple". The temple is best known for its top two floors being covered entirely in gold leaf, which reflect exquisitely in the surrounding pond, creating one of Japan's most iconic and peaceful scenery. The gold was used for spirituals purposes, as it was thought to purify pollution or any negative thoughts and any feelings towards death,  as well as visual symbolic ones in a period that heavily relied on building aesthetics. Kinkaku-Ji was originally built between 1397-1399 during the Muromachi period. The current structure has been rebuilt in 1955 after it was destroyed in an arson attack. </p>
+  </div>
+
+  <div class="attraction">
+    <h2 id="attraction4">🟢 4.	Tokyo Skytree(東京スカイツリー, Tōkyō Sukaitsurī)</h2>
+    <div class="images">
+      <img src="https://th.bing.com/th/id/OIP.3_30K7wLFPKGNBsXMPSJ4wHaE8?w=275&h=184&c=7&r=0&o=7&pid=1.7&rm=3">
+      <img src="https://th.bing.com/th/id/OIP.0ek3JFLMuqcRFDBxMB-xlQHaFj?w=254&h=191&c=7&r=0&o=7&pid=1.7&rm=3">
+    </div>
+    <p id="text4">	Tokyo Skytree(東京スカイツリー, Tōkyō Sukaitsurī) is a 634-meter-tall television and radio broadcasting site for the Kantō region,as well as being an observation tower, its self being located in Sumida, Tokyo. Its height was intentionally chosen as a reference to "Musashi"(6-3-4), an old for the Tokyo region. It was completed in 2012, and is the third tallest structures in the world. It replaces the older Tokyo tower because it was ineffective due to being surrounded by high rise buildings. The name "sky" and "tree" symbolizes connectivity and growth. Its structure is meticulously designed, starting with a triangular base that gradually becomes a circular shaft, a form that improves stability and air resistance. Its known for its nighttime lighting, featuring two main illuminations that alternate daily, "Iki", a sky blue color representing "stylish" and "Miyabi",a purple color representing elegance and refinement, using LED to achieve this. Its exterior lattice is painted a color officially called "Skytree White", this is an original color based on bluish-white traditional Japanese called aijiro. </p>
+  </div>
+
+  <div class="attraction">
+    <h2 id="attraction5">🟤 5.	Himeji Castle(姫路城)</h2>
+    <div class="images">
+      <img src="https://th.bing.com/th/id/OIP.whvlqvbg7YuXMqqHG4Hj4QHaDt?w=312&h=180&c=7&r=0&o=7&pid=1.7&rm=3">
+      <img src="data:image/webp;base64,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">
+    </div>
+    <p id="text5">	Himeji Castle (姫路城) is located in Himeji and is considered the finest surviving example of traditional Japanese castles. It is the largest and most visited castle in Japan, featuring a complex network of 83 advanced defensive systems from the feudal period. It is frequently referred to as Hakuro-jō, meaning White Egret Castle or Shirasagi-jō, meaning White Heron Castle. This is due to its brilliant white exterior and its supposed resemblance to a bird taking flight. Its origins date back to 1333, when Akamatsu Norimura built the first fort on top of Himeyama Hill. At the centre of the castle stands the tenshu(天守)(main keep), which is the most prominent structure of Japanese castles. It served as a storehouse in times of peace and as a fortified tower in times of war. Around it were the residences and government offices of the daimyo (大名, feudal lord), surrounded by yagura(櫓)(turrets). Recently it underwent restoration work for several years and reopened to the public on March 27, 2015. </p>
+  </div>
+
+</div>
+<script> const translations = {
+    en: {
+      htmlLang: 'en',
+      logoText: 'Explore Japan 🇯🇵',
+      title: 'Top Japan Attractions',
+      attraction1: '1.	Mount Fuji(富士山/富士の山)',
+      text1:	'Mount fuji is the tallest mountain in Japan, standing at 3,776 above sea level and is considered a symbol of Japan. It last erupted in 1707 yet it still active to this day and stands out because it is made up of three different volcanoes. The mountain is surrounded by 5 lakes, Kawaguchiko(河口湖), the most popular and accesible one, Saiko(西湖), meaning the west lake, lake Yamanakako(山中湖) the largest, Shojiko (精進湖), the smallest and Motosuko (本栖湖) the deepest. There are 4 trails that lead to the top of the mountain, making climbing a popular activity amongs hikers and visitors. Visitors can also explore nearby attractions such as Oshino Hakkai, a small vilage in a scenic setting with 8 ponds and features views of Mount Fuji for amazing photos. There is also Arakurayama Sengen Park, which offers dramatic views of Mt. Fuji along with nearby seasonal cherry blossoms and a pagoda(a traditional Japanese tower).',
+      attraction2: '2.	Fushimi Inari Taisha(伏見稲荷大社)',
+      text2: 'Fushimi Inari Taisha(伏見稲荷大社) is one of the most famous Shinto shrines in Japan, located in Fushimi-ku, Kyoto. It was founded in 711 CE by the Hata clan and is considered the head shrine of 30,000 Inari shrines. The shrine is dedicated to Inari Ōkami, the deity of rice, prosperity and business success. It is best known for its thousands of vermilion (bright red) torii gates forming scenic tunnels along the wooded slopes of Mount Inari, offering an unforgettable walking experience for visitors.',
+      attraction3: '3.	Kinkaku-Ji(金閣寺)',
+      text3: 	"Kinkaku-Ji(金閣寺), also known as the Golden Pavilion, is a Zen Buddhist Temple in Kyoto. Its official name is Rokuon-ji(鹿苑寺), meaning 'Deer Garden Temple'. The temple is best known for its top two floors being covered entirely in gold leaf, which reflect exquisitely in the surrounding pond, creating one of Japan's most iconic and peaceful scenery. The gold was used for spirituals purposes, as it was thought to purify pollution or any negative thoughts and any feelings towards death,  as well as visual symbolic ones in a period that heavily relied on building aesthetics. Kinkaku-Ji was originally built between 1397-1399 during the Muromachi period. The current structure has been rebuilt in 1955 after it was destroyed in an arson attack.",
+      attraction4: '4.	Tokyo Skytree(東京スカイツリー, Tōkyō Sukaitsurī)',
+      text4: 'Tokyo Skytree(東京スカイツリー, Tōkyō Sukaitsurī) is a 634-meter-tall television and radio broadcasting site for the Kantō region, as well as being an observation tower, itself located in Sumida, Tokyo. Its height was intentionally chosen as a reference to "Musashi"(6-3-4), an old name for the Tokyo region. It was completed in 2012, and is the third tallest structure in the world. It replaced the older Tokyo Tower because it was ineffective due to being surrounded by high-rise buildings. The name "sky" and "tree" symbolizes connectivity and growth. Its structure is meticulously designed, starting with a triangular base that gradually becomes a circular shaft, a form that improves stability and air resistance. It’s known for its nighttime lighting, featuring two main illuminations that alternate daily, "Iki" a sky blue color representing "stylish" and "Miyabi" a purple color representing elegance and refinement, using LED to achieve this. Its exterior lattice is painted a color officially called "Skytree White", an original color based on bluish-white traditional Japanese called aijiro.',
+      attraction5: '5.	Himeji Castle(姫路城)',
+      text5: 'Himeji Castle (姫路城) is located in Himeji and is considered the finest surviving example of traditional Japanese castles. It is the largest and most visited castle in Japan, featuring a complex network of 83 advanced defensive systems from the feudal period. It is frequently referred to as Hakuro-jō, meaning White Egret Castle or Shirasagi-jō, meaning White Heron Castle. This is due to its brilliant white exterior and its supposed resemblance to a bird taking flight. Its origins date back to 1333, when Akamatsu Norimura built the first fort on top of Himeyama Hill. At the centre of the castle stands the tenshu(天守)(main keep), which is the most prominent structure of Japanese castles. It served as a storehouse in times of peace and as a fortified tower in times of war. Around it were the residences and government offices of the daimyo (大名, feudal lord), surrounded by yagura(櫓)(turrets). Recently it underwent restoration work for several years and reopened to the public on March 27, 2015.',
+      nav1: 'Home',
+      nav2: 'National food and restaurants',
+      nav3: 'Transportation',
+      nav4: 'Hotels/Accommodations',
+      nav5: 'Special Section',
+      nav6: 'Attractions'
+
+    },
+    
+    
+    el: {
+
+    htmlLang: 'el',
+    
+
+    logoText: 'Εξερευνήστε την Ιαπωνία 🇯🇵',
+    title: 'Κορυφαία αξιοθέατα στην Ιαπωνία',
+    attraction1: '1. Όρος Φούτζι (富士山/富士の山)',
+    text1: 'Το όρος Φούτζι είναι το ψηλότερο βουνό στην Ιαπωνία, με ύψος 3.776 μέτρα πάνω από την επιφάνεια της θάλασσας και θεωρείται σύμβολο της Ιαπωνίας. Η τελευταία του έκρηξη σημειώθηκε το 1707, όμως παραμένει ενεργό μέχρι σήμερα και ξεχωρίζει επειδή αποτελείται από τρία διαφορετικά ηφαίστεια. Το βουνό περιβάλλεται από πέντε λίμνες: η Kawaguchiko (河口湖), η πιο δημοφιλής και εύκολα προσβάσιμη, η Saiko (西湖), που σημαίνει «δυτική λίμνη», η λίμνη Yamanakako (山中湖), η μεγαλύτερη, η Shojiko (精進湖), η μικρότερη, και η Motosuko (本栖湖), η βαθύτερη. Υπάρχουν τέσσερα μονοπάτια που οδηγούν στην κορυφή του βουνού, κάνοντας την ανάβαση μια δημοφιλή δραστηριότητα για πεζοπόρους και επισκέπτες. Οι επισκέπτες μπορούν επίσης να εξερευνήσουν κοντινά αξιοθέατα, όπως το Oshino Hakkai, ένα μικρό χωριό μέσα σε ένα γραφικό τοπίο με οκτώ λιμνούλες, καθώς και με θέα στο όρος Φούτζι για εντυπωσιακές φωτογραφίες. Υπάρχει επίσης το πάρκο Arakurayama Sengen, το οποίο προσφέρει εντυπωσιακή θέα στο όρος Φούτζι, μαζί με ανθισμένες κερασιές ανά εποχή και μια παγόδα (παραδοσιακός ιαπωνικός πύργος).',
+    attraction2: '2. Φουσίμι Ινάρι-τάισα (伏見稲荷大社)',
+    text2: 'Το Φουσίμι Ινάρι-τάισα (伏見稲荷大社) είναι ένας από τους πιο διάσημους Σιντοϊστικούς ναούς στην Ιαπωνία, που βρίσκεται στο Fushimi-ku, στο Κιότο. Ιδρύθηκε το 711 μ.Χ. από το γένος Hata και θεωρείται ο κεντρικός ναός περίπου 30.000 ναών Inari. Ο ναός είναι αφιερωμένος στον Inari Ōkami, τη θεότητα του ρυζιού, της ευημερίας και της επιχειρηματικής επιτυχίας. Είναι περισσότερο γνωστός για τις χιλιάδες από βερμιγιόν (έντονο κόκκινο) torii πύλες που σχηματίζουν γραφικά «τούνελ» κατά μήκος των δασωμένων πλαγιών του όρους Inari, προσφέροντας μια αξέχαστη εμπειρία πεζοπορίας για τους επισκέπτες.',
+    attraction3: '3. Το Χρυσό Περίπτερο(金閣寺)',
+    text3: 'Το Kinkaku-ji (金閣寺), γνωστό και ως Χρυσό Περίπτερο, είναι ένας Ζεν βουδιστικός ναός στο Κιότο. Η επίσημη ονομασία του είναι Rokuon-ji (鹿苑寺), που σημαίνει «Ναός του Κήπου των Ελαφιών». Ο ναός είναι κυρίως γνωστός για το γεγονός ότι οι δύο ανώτεροι όροφοι του είναι πλήρως καλυμμένοι με φύλλα χρυσού, τα οποία αντανακλώνται υπέροχα στη γύρω λίμνη, δημιουργώντας ένα από τα πιο εμβληματικά και γαλήνια τοπία της Ιαπωνίας. Ο χρυσός χρησιμοποιήθηκε για πνευματικούς λόγους, καθώς θεωρούνταν ότι καθαρίζει τη ρύπανση ή οποιεσδήποτε αρνητικές σκέψεις και συναισθήματα απέναντι στον θάνατο, καθώς και για αισθητικούς και συμβολικούς λόγους σε μια περίοδο που έδινε μεγάλη σημασία στην αρχιτεκτονική αισθητική. Το Kinkaku-ji χτίστηκε αρχικά μεταξύ 1397 και 1399 κατά την περίοδο Muromachi. Το σημερινό κτίσμα ανακατασκευάστηκε το 1955, μετά την καταστροφή του σε εμπρηστική επίθεση.',
+    attraction4: '4. Ουράνιο Δέντρο του Τόκιο(東京スカイツリー, Tōkyō Sukaitsurī)',
+    text4: 'Το Ουράνιο Δέντρο του Τόκιο (東京スカイツリー, Tōkyō Sukaitsurī) είναι ένας πύργος τηλεοπτικών και ραδιοφωνικών εκπομπών ύψους 634 μέτρων για την περιοχή Kantō, καθώς και παρατηρητήριο, που βρίσκεται στο Sumida του Τόκιο. Το ύψος του επιλέχθηκε σκόπιμα ως αναφορά στη λέξη «Musashi» (6-3-4), μια παλιά ονομασία για την περιοχή του Τόκιο. Ολοκληρώθηκε το 2012 και είναι η τρίτη ψηλότερη κατασκευή στον κόσμο. Αντικατέστησε τον παλαιότερο Tokyo Tower, καθώς εκείνος είχε καταστεί λιγότερο αποτελεσματικός λόγω της ύπαρξης υψηλών κτιρίων γύρω του. Το όνομα «sky» (ουρανός) και «tree» (δέντρο) συμβολίζει τη σύνδεση και την ανάπτυξη. Η δομή του είναι μελετημένη με ακρίβεια, ξεκινώντας από μια τριγωνική βάση που σταδιακά μετατρέπεται σε κυκλικό κορμό, ένα σχήμα που βελτιώνει τη σταθερότητα και την αντοχή στον αέρα. Είναι γνωστό για τον νυχτερινό του φωτισμό, που περιλαμβάνει δύο κύριους φωτισμούς οι οποίοι εναλλάσσονται καθημερινά: το «Iki», ένα γαλάζιο χρώμα που συμβολίζει το «κομψό στυλ», και το «Miyabi», ένα μωβ χρώμα που αντιπροσωπεύει την κομψότητα και τη φινέτσα, χρησιμοποιώντας τεχνολογία LED. Το εξωτερικό του πλέγμα είναι βαμμένο σε ένα χρώμα επίσημα γνωστό ως «Skytree White», μια αυθεντική απόχρωση βασισμένη στο παραδοσιακό ιαπωνικό μπλε-λευκό χρώμα που ονομάζεται aijiro.',
+    attraction5: '5. Κάστρο Χιμέτζι(姫路城)',
+    text5: 'Το Κάστρο Χιμέτζι (姫路城) βρίσκεται στην πόλη Himeji και θεωρείται το καλύτερο σωζόμενο παράδειγμα παραδοσιακών ιαπωνικών κάστρων. Είναι το μεγαλύτερο και το πιο επισκέψιμο κάστρο στην Ιαπωνία, με ένα πολύπλοκο δίκτυο 83 προηγμένων αμυντικών συστημάτων από τη φεουδαρχική περίοδο. Συχνά αποκαλείται Hakuro-jō, που σημαίνει «Κάστρο του Λευκού Ερωδιού», ή Shirasagi-jō, που σημαίνει επίσης «Κάστρο του Λευκού Ερωδιού». Αυτό οφείλεται στο λαμπερό λευκό εξωτερικό του και στη φημολογούμενη ομοιότητά του με ένα πουλί που ετοιμάζεται να πετάξει. Η προέλευσή του χρονολογείται από το 1333, όταν ο Akamatsu Norimura έχτισε το πρώτο οχυρό πάνω στον λόφο Himeyama. Στο κέντρο του κάστρου βρίσκεται το tenshu (天守) (κεντρικός πύργος), που είναι η πιο χαρακτηριστική κατασκευή των ιαπωνικών κάστρων. Στην περίοδο ειρήνης χρησιμοποιούνταν ως αποθήκη, ενώ σε περιόδους πολέμου λειτουργούσε ως οχυρωμένος πύργος. Γύρω του βρίσκονταν οι κατοικίες και τα κυβερνητικά γραφεία του daimyo (大名, φεουδάρχης άρχοντας), τα οποία περιβάλλονταν από yagura (櫓) (πύργους-φυλάκια). Πρόσφατα το κάστρο πέρασε από πολυετή εργασίες αποκατάστασης και άνοιξε ξανά στο κοινό στις 27 Μαρτίου 2015.',
+    nav1: 'Αρχική σελίδα',
+    nav2: 'Παραδοσιακά Φαγητά και κουζίνα',
+    nav3: 'Ταξίδια',
+    nav4: 'Διαμονή',
+    nav5: 'Special Section',
+    nav6: 'Αξιοθέατα'
+
+
+    }
+  };
+
+
+function setLanguage(lang) {
+    const data = translations[lang] || translations.en;
+    document.documentElement.lang = data.htmlLang;
+    Object.keys(data).forEach((key) => {
+      if (key === 'htmlLang') return;
+      const element = document.getElementById(key);
+      if (element) {
+        element.textContent = data[key];
+      }
+    });
+  }
+
+  const languageSelect = document.getElementById('languageSelect');
+  languageSelect.addEventListener('change', () => setLanguage(languageSelect.value));
+  setLanguage('en');</script>
+      
+
+</body>
+</html>
